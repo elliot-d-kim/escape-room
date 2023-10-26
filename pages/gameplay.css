@@ -1,0 +1,19 @@
+#gamescreen {
+    width: 98vw;
+    height: 96vh;
+    background-color: blue;
+    min-width: 900px; margin: 0 auto; max-height: 700px;
+}
+
+#actualgame {
+    width: 20vw;
+    height: 20vh;
+    margin: auto;
+    background-color: pink;
+}
+
+#textgame{
+    color: brown;
+    font-style: bold;
+    font-size: 3vw;
+}

@@ -7,18 +7,20 @@ button.addEventListener("click", changeIt);
 function changeIt(){
     if (isitsmoll == true){
         button.innerHTML = "Make Me Smoll!";
-        goFullScreen();
         isitsmoll = false;
+        goFullScreen();
     }
     else{
         button.innerHTML = "Make Me Big!";
-        exitFullScreen();
         isitsmoll = true;
+        exitFullScreen();
     }
 }
 
-function goFullScreen(){
 
+
+// functions for the fullscreen
+function goFullScreen(){
     if(screen.requestFullscreen){
         screen.requestFullscreen();
     }
@@ -34,7 +36,6 @@ function goFullScreen(){
 }
 
 function exitFullScreen(){
-
     if(document.exitFullscreen){
         document.exitFullscreen();
     }
@@ -47,5 +48,4 @@ function exitFullScreen(){
     else if(document.msExitFullscreen){
         document.msExitFullscreen();
     }
-
 }
