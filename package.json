@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/elliot-d-kim/escape-room/issues"
   },
-  "homepage": "https://github.com/elliot-d-kim/escape-room#readme"
+  "homepage": "https://github.com/elliot-d-kim/escape-room#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
