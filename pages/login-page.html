@@ -5,23 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <script defer src="./login-page.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: gray;
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+            font-family: 'Inter', sans-serif;
+
+        }
+        .login-box {
+            background-color: white;
+            text-align: center;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-box .info {
+            display: flex;
+            margin: 24px;
+            flex-wrap: wrap;
+            width: 250px;
+        }
+
+        .login-box .authentication > * {
+            margin: 12px 0px;
+            color: gray;
+        }
+        .login-box .authentication form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .login-box .authentication form p {
+            margin: inherit;
+        }
+        .login-box .authentication button {
+            margin: inherit;
+            width: 250px;
+            padding: 8px;
+            box-sizing: border-box;
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            border-radius: 15px;
+        }
+        .login-box .authentication form #email-field {
+            width: 250px;
+            padding: 8px;
+            box-sizing: border-box;
+            background-color: lightgray;
+            border: 1px lightgray;
+            border-radius: 4px;
+        }
+        .login-box .authentication button#email-login-button {
+            background-color: black;
+            color: white;
+            border: 1px solid black;
+        }
+        .toc-and-privacy-footer {
+            font-size: x-small;
+            color: gray;
+        } 
+        a {
+            color: black;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <main>
-        <h1>Login</h1>
+        <div class="login-box">
+            
+            <h1>Welcome</h1>
+            
+            <div class = "info">
+                <!-- Login -->
+                <div class="authentication">
+                    <!-- Sign in with Google -->
+                    <button type="button">Sign in with Google</button>
 
-        <!-- Login -->
-        <form id="login-form">
-            <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-            <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
-            <input type="submit" value="Login" id="login-form-submit">
-        </form>
+                    <p>or</p>
 
-        <!-- If user doesn't have an existing account, direct them to 'Create account' page -->
-        <p><a href="./create-account-page.html">Create account</a></p>
-        
-        <!-- Return to homepage -->
-        <p><a href="../index.html">Home</a></p>
+                    <!-- Sign in with email -->
+                    <form id="login-form">
+                        <input type="email" name="email" id="email-field" class="login-form-field" placeholder="youremail@domain.com">
+                        <!-- <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password"> -->
+                        <button type="submit" id="email-login-button">Sign in with email
+                    </form>
+                </div>
+
+                
+                
+                <!-- If user doesn't have an existing account, direct them to 'Create account' page -->
+                <!-- <p><a href="./create-account-page.html">Create account</a></p> -->
+                
+                <!-- Return to homepage -->
+                <!-- <p><a href="../index.html">Home</a></p> -->
+            </div>
+
+            <!-- TOC, etc. -->
+            <p class="toc-and-privacy-footer">By signing in, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</p>
+
+        </div>
     </main>
 
 </body>
