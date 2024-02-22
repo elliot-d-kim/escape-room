@@ -9,6 +9,8 @@ A web-based escape room game.
 
 ## Status
 
+Updates every 2-5 weeks, unless noted otherwise.
+
 ### Feb 22, 2024
 
 * **Story & world-building:** Mostly completed overarching plot and layout of primary setting. Queue: dialogue. (HC, AS)
@@ -20,9 +22,9 @@ A web-based escape room game.
 
 ## Contributors
 
-* Elliot Kim ([GitHub](github.com/elliot-d-kim))
-* Eunice Lee ([GitHub](github.com/user101301))
-* Jiho Kim ([GitHub](github.com/shakenBeef))
-* Haru Chang (harumahnchang@gmail.com)
-* Kevin Hwang ([IG](instagram.com/kevinky_art))
+* Elliot Kim: [GitHub](github.com/elliot-d-kim)
+* Eunice Lee: [GitHub](github.com/user101301)
+* Jiho Kim: [GitHub](github.com/shakenBeef)
+* Haru Chang: harumahnchang@gmail.com
+* Kevin Hwang: [Instagram](instagram.com/kevinky_art)
 * Angie Shin
