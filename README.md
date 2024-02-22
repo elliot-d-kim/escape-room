@@ -20,9 +20,9 @@ A web-based escape room game.
 
 ## Contributors
 
-* Elliot Kim (GitHub @elliot-d-kim)
-* Eunice Lee (GitHub @user101301)
-* Jiho Kim (GitHub @shakenBeef)
+* Elliot Kim ([GitHub](github.com/elliot-d-kim))
+* Eunice Lee ([GitHub](github.com/user101301))
+* Jiho Kim ([GitHub](github.com/shakenBeef))
 * Haru Chang (harumahnchang@gmail.com)
-* Kevin Hwang (IG @kevinky_art)
+* Kevin Hwang ([IG](instagram.com/kevinky_art))
 * Angie Shin
