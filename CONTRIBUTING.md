@@ -15,11 +15,13 @@ This document primarily informs internal developers on set-up and development be
         - [2.4 Assign privileges](#24-assign-privileges)
         - [2.5 Connect as the new user](#25-connect-as-the-new-user)
     - [3. Install Sequelize](#3-install-sequelize)
-    - [4. Install `pg` and `pg-hstore`](#4-install-pg-and-pg-hstore)
+    - [4. Status on `sequelize-cli`](#4-status-on-sequelize-cli)
     - [5. Initialize Sequelize](#5-initialize-sequelize)
     - [6. Update `config/config.json`](#6-update-configconfigjson)
     
 ## Installation for developers
+
+For installation on Windows, follow the steps on [PostgreSQL Tutorial](https://www.postgresqltutorial.com/postgresql-getting-started/install-postgresql/).  
 
 The following steps are for Ubuntu 22.04.
 
@@ -158,9 +160,48 @@ escape_room=>
 
 ### 3. Install Sequelize
 
-### 4. Install `pg` and `pg-hstore`
+At this time, Sequelize is the best database interaction solution for this project. Sequelize is an ORM, providing developers an abstraction layer on top of SQL. Instead of writing raw SQL queries, developers can use methods provided by the ORM to define database schemas and interact with the database.
+
+Though using raw SQL can be simpler for small projects such as this one, this project is subject to structural adjustments as we developers learn on the job. Without an ORM, any changes to database schema would require updating every related raw SQL query. Thus, using an ORM would be a more robust approach.
+
+There are many ORMs out there, and for Node.js backends, TypeORM, Mongoose, and Prisma are some of the more popular alternatives to Sequelize. However, Sequelize is the most mature of these with extensive resources and community support (important for learning developers). The following are additional reasons to not proceed with the alternatives:
+* TypeORM: designed for TypeScript projects
+* Mongoose: for projects using MongoDB databases
+* Prisma: popular among developers but the least mature of these by far
+
+The steps to install Sequelize (v6) and the relevant drivers can be found in their [documentation](https://sequelize.org/docs/v6/getting-started/). Below are the steps specific to this project.
+
+Install sequelize with Node Package Manager. This project uses Sequelize 6.37.1.
+```bash
+npm install --save sequelize
+```
+
+Install the relevant driver for PostgreSQL. This project uses pg 8.11.3 and pg-hstore 2.3.4.
+```bash
+npm install --save pg pg-hstore
+```
+
+### 4. Install `sequelize-cli`
+
+Though `sequelize-cli` is not necessary, it gives developers access to some simple commands without adding much overhead or runtime dependencies. We will see when we initialize Sequelize, `sequelize-cli` gives developers access to the `init` command, which is much simpler than the alternative methods, which include:
+* Manually setting up Sequelize directories and configuration
+* Using custom scripts
+* Using boilerplate templates
+* Relying on integrated frameworks, e.g., NestJS or AdonisJS
+
+For the sake of minimal overhead and simplicity appropriate for learning developers, we will proceed with the default set up offered by `sequelize-cli`, though we may revisit these alternative methods.
+
+The instructions for installing `sequelize-cli` can be found in their [documentation](https://github.com/sequelize/cli).
+```bash
+npm install --save-dev sequelize-cli
+```
 
 ### 5. Initialize Sequelize
+
+In your project directory, initialize Sequelize with default configurations.
+```bash
+sequelize init
+```
 
 ### 6. Update `config/config.json`
 
