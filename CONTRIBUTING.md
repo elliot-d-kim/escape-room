@@ -21,7 +21,10 @@ This document primarily informs internal developers on set-up and development be
     
 ## Installation for developers
 
-For installation on Windows, follow the steps on [PostgreSQL Tutorial](https://www.postgresqltutorial.com/postgresql-getting-started/install-postgresql/).  
+For installation on Windows, follow the steps on [PostgreSQL Tutorial](https://www.postgresqltutorial.com/postgresql-getting-started/install-postgresql/).
+* Note: Install PostgreSQL 14.x instead of version 16.
+* Create new database and user in pgAdmin 4
+    * User: can login, create roles, create dbs, inherit rights
 
 The following steps are for Ubuntu 22.04.
 
