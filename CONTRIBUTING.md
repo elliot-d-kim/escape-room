@@ -196,7 +196,7 @@ For the sake of minimal overhead and simplicity appropriate for learning develop
 
 The instructions for installing `sequelize-cli` can be found in their [documentation](https://github.com/sequelize/cli).
 ```bash
-npm install --save-dev sequelize-cli
+npm install --save-dev -g sequelize-cli
 ```
 
 ### 5. Initialize Sequelize
