@@ -1,0 +1,17 @@
+                                List of databases
+    Name     |  Owner   | Encoding | Collate |  Ctype  |    Access privileges    
+-------------+----------+----------+---------+---------+-------------------------
+ api         | postgres | UTF8     | C.UTF-8 | C.UTF-8 | =Tc/postgres           +
+             |          |          |         |         | postgres=CTc/postgres  +
+             |          |          |         |         | api_tester=CTc/postgres
+ escape_room | postgres | UTF8     | C.UTF-8 | C.UTF-8 | =Tc/postgres           +
+             |          |          |         |         | postgres=CTc/postgres  +
+             |          |          |         |         | elliot=CTc/postgres
+ postgres    | postgres | UTF8     | C.UTF-8 | C.UTF-8 | 
+ template0   | postgres | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres            +
+             |          |          |         |         | postgres=CTc/postgres
+ template1   | postgres | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres            +
+             |          |          |         |         | postgres=CTc/postgres
+ test        | postgres | UTF8     | C.UTF-8 | C.UTF-8 | 
+(6 rows)
+

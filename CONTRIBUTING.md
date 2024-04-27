@@ -107,14 +107,17 @@ Open `pg_hba.conf` from the terminal. Here, `nano` is the text editor that will 
 sudo nano /etc/postgresql/14/main/pg_hba.conf
 ```
 
-Use the arrow keys to reach the bottom of `pg_hba.conf`. Add the following entry. Replace `developer_1` with the username you plan to use to log in to the `escape_room` database.
+Use the arrow keys to reach the bottom section of `pg_hba.conf` where several default logins are stored. Add the following entry just under the column titles as shown. This will position this entry between the database administrative login (i.e., the `postgres` superuser) and the `local` connection login, which is set to `peer` authentication by default (to understand why this matters, [read more](https://dba.stackexchange.com/a/131130)). Replace `developer_1` with the username you plan to use to log in to the `escape_room` database.
 ```
 # TYPE  DATABASE        USER            ADDRESS     METHOD
-...     ...             ...             ...         ...
 
 # Escape Room Game
 local   escape_room     developer_1                 md5
+
+...     ...             ...                         ...
 ```
+Note: Log in with `developer_1` will be restricted to the database(s) specified here.
+
 On your keyboard, hit `Ctrl+X` to exit, `Y` to save changes, then `Enter` to keep the filename unchanged.
 
 From the terminal, log in again as `postgres`.
@@ -152,6 +155,16 @@ While the `postgres` superuser may own the `escape_room` database, refrain from 
 ```
 
 From now on, use the non-superuser account to access the database.
+```bash
+psql -U developer_1 -d escape_room
+```
+
+If that doesn't work, try this instead.
+```bash
+psql postgres -U developer_1 -d escape_room
+```
+
+And if that doesn't work, try this.
 ```bash
 psql -U developer_1 -d escape_room -localhost
 ```
